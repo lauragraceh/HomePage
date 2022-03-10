@@ -2,12 +2,7 @@
 <html>
 <head>
 <style>
-body {
-  font-family: Trebuchet MS;
-  padding: 10px;
-  background: #DADED4;
-}
-      p {
+     p {
       color: #3C403D;
     }
     
@@ -25,7 +20,24 @@ body {
     h2 {
           color:#3C403D;
         }
-     /* Header/Blog Title */
+    
+ img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} 
+  
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Trebuchet MS;
+  padding: 10px;
+  background: #DADED4;
+}
+
+/* Header/Blog Title */
 .header {
   padding: 30px;
   text-align: center;
@@ -35,7 +47,23 @@ body {
 .header h1 {
   font-size: 50px;
 }
-     li {
+
+
+
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#3C403D;
+}
+
+li {
   float: left;
 }
 
@@ -94,16 +122,63 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
-} 
-  
-     </style>
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color:#FFFFFF, ;
+  padding-left: 20px;
+}
+
+
+/* articles */
+.card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: left;
+  background: #3C403D;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
-     <div class="header">
+
+<div class="header">
   <h1>Our Relationship to Public Art in an Online Space</h1>
   <p>A research proposal by Laura Helgeson.</p>
 </div>
-        <ul>
+
+   <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a class="active" href="#home">Sources</a></li>
 <li class="dropdown">
@@ -116,7 +191,29 @@ li.dropdown {
       <a href="#">Significance</a>
       <a href="#">Sources</a>
 </ul>
-  
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Rationale</h2>
+      <img src=https://www.shareoregon.com/things-to-do/system/images/238838/big/Public_Art_1.jpg?1501559969>
+      <p>The questions I will be examining are: How do we interact with public art online vs. in person, and does this affect the purpose of public art? My hypothesis going into this research is that we interact or connect with public art more in depth in online environments than we do in our physical environment. The purpose of public art is becoming increasingly about appealing to digital spaces or acting as a digital place marker on social media, rather than to improve the urban environment, as previously thought. If this hypothesis is disconfirmed, then it can be assumed that public art serves its previously conceived purpose despite how it exists on digital platforms.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Read Next...</h2>
+       <a href="https://lauragraceh.github.io/ResearchProposal/#about">
+         <img alt="Placeholder" src="https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder.png"
+         width=150" height="70">
+      <p>Method and Design</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p5>Published March 9,2022</p5>
+</div>
 
 </body>
 </html>
